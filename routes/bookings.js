@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   const bookings = await Booking.find().populate('userId roomId');
   res.json(bookings);
 });
-console.log('123')
+
 // Create a new booking
 router.post('/', async (req, res) => {
   const booking = new Booking(req.body);
